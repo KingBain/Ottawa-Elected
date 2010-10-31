@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @ward.name %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%=h @ward.number %>
+</p>
+
+
+<%= link_to 'Edit', edit_ward_path(@ward) %> |
+<%= link_to 'Back', wards_path %>

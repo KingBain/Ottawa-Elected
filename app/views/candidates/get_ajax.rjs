@@ -1,0 +1,6 @@
+page.replace_html :ward_name, @candidate.name
+page.replace_html :ward_ward, @candidate.ward
+page.replace_html :ward_web, @candidate.website
+page.replace_html :ward_twitter, @candidate.twitter
+page.replace_html :ward_youtube, @candidate.youtube
+page.replace_html :ward_phone, @candidate.phone
