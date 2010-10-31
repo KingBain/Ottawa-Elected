@@ -1,0 +1,11 @@
+<table border="1">
+
+
+<% @posts.each do |post| %>
+Date: <%=h post.Date %><br>
+Title: <%=h post.name %><br><br>
+<%= post.body %>
+<% end %>
+</table>
+
+<br />
