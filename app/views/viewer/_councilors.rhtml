@@ -1,0 +1,37 @@
+
+
+
+<% @candidates.each do |candidate| %>
+
+
+
+<table border="0">
+<tr>
+	<td><%= image_tag candidate.image if candidate.image %><br><%=h candidate.name %></td>
+	<td valign="top">
+	<%= link_to image_tag("/images/icons/website_icon.gif", :border=>0), candidate.website if candidate.website? %>
+	<%= "<br>" if candidate.website? %>
+	<%= link_to image_tag("/images/icons/twitter_icon.gif", :border=>0), candidate.twitter if candidate.twitter? %>	
+	<%= "<br>" if candidate.twitter? %>
+	<%= link_to image_tag("/images/icons/facebook_icon.gif", :border=>0), candidate.facebook if candidate.facebook? %>	
+	<%= "<br>" if candidate.facebook? %>
+	<%= link_to image_tag("/images/icons/youtube_icon.gif", :border=>0), candidate.youtube if candidate.youtube? %>	
+	<%= "<br>" if candidate.youtube? %>
+	<%= mail_to candidate.email, image_tag("/images/icons/email_icon.gif", :border=>0) if candidate.email? %>	
+	<%= "<br>" if candidate.email? %>
+	<%= mail_to candidate.email, image_tag("/images/icons/rss_icon.gif", :border=>0) if candidate.rss? %>	
+	<%= "<br>" if candidate.rss? %>
+	</td>
+</tr>
+<tr><td>Ward:<br>
+<%= candidate.ward %></td>
+<td></td></tr>
+<tr><td width="30px">Office<br>
+<%= candidate.office %></td><td></td></tr>
+<tr><td>Phone:<br>
+<%= candidate.phone %></td><td></td></tr>
+</table>
+
+<%= candidate.getward %>
+<hr>
+<% end %>
