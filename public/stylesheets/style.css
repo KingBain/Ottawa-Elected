@@ -15,7 +15,7 @@ p { margin: 0px; padding: 10px 10px; }
 a { color: #336699; text-decoration: none; }
 a:hover { text-decoration: none; color : #880000; }
 
-img { border: none; padding: 6px; } 
+img { border: none;} 
 img a {border:none;} 
 
 ul { list-style-type: none; }

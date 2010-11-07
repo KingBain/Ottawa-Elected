@@ -1,6 +1,11 @@
 class WardsController < ApplicationController
-  # GET /wards
+ # GET /wards
   # GET /wards.xml
+def get_ward(ward)
+	@ward = Ward.find_by_number(ward)
+	puts @ward.name
+end
+
   def index
     @wards = Ward.all
 

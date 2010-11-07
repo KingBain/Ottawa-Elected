@@ -7,11 +7,11 @@ def loadmetadata
 end
 
   def index
-@posts = Post.all
+	@posts = Post.all
   end
 
   def show
-@page = Page.find_by_name(params[:name])
+	@page = Page.find_by_name(params[:name])
   end
 
 end
