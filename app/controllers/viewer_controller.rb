@@ -1,14 +1,16 @@
 class ViewerController < ApplicationController
 def index
-	@page = Page.find_by_name("Home")
+	@page = Page.find_by_name("home")
 end  
 
 def show
+
 	@page = Page.find_by_name(params[:name])
-	if params[:name] = "Councilors"
+	@partial = params[:name]
+
+	if params[:name] = "councilors" then	
 	@candidates = Candidate.all
 	end
-
 end
 
 
