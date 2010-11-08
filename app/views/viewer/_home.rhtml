@@ -5,7 +5,7 @@
 
 <% @posts.each do |post| %>
 <br /><br />
-<strong>Date:</strong> <%=h post.Date %><br>
+<strong>Date:</strong> <%=h post.date %><br>
 <strong>Title:</strong> <%=h post.name %><br>
 <%= post.body %>
 <% end %>

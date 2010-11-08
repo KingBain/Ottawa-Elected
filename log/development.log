@@ -48357,3 +48357,130 @@ ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
 Rendered rescues/_trace (83.8ms)
 Rendered rescues/_request_and_response (1.2ms)
 Rendering rescues/layout (not_found)
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 01:33:38) [GET]
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" ORDER BY date LIMIT 3[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered viewer/_home (3.2ms)
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20101030013334)
+Migrating to AddHeadToPage (20101030023150)
+Migrating to CreateCandidates (20101030031832)
+Migrating to CreateWards (20101030031920)
+Migrating to CreatePosts (20101031153124)
+Migrating to AddImageToCandidates (20101105024533)
+Migrating to FixColumnName (20101108064008)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TEMPORARY TABLE "altered_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "posts"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_posts")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_posts"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101108064008')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("candidates")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("wards")[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 01:42:02) [GET]
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY date LIMIT 3[0m
+Rendering template within layouts/application
+Rendering viewer/index
+
+ActionView::TemplateError (undefined method `Date' for #<Post:0xb6e25f20>) on line #8 of app/views/viewer/_home.rhtml:
+5: 
+6: <% @posts.each do |post| %>
+7: <br /><br />
+8: <strong>Date:</strong> <%=h post.Date %><br>
+9: <strong>Title:</strong> <%=h post.name %><br>
+10: <%= post.body %>
+11: <% end %>
+
+    app/views/viewer/_home.rhtml:8:in `_run_rhtml_app47views47viewer47_home46rhtml_locals_home_object'
+    app/views/viewer/_home.rhtml:6:in `each'
+    app/views/viewer/_home.rhtml:6:in `_run_rhtml_app47views47viewer47_home46rhtml_locals_home_object'
+    app/views/viewer/index.erb:2
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 01:42:27) [GET]
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY date LIMIT 3[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered viewer/_home (2.7ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-08 01:42:34) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (undefined method `Date' for #<Post:0xb70a0bd8>) on line #13 of app/views/posts/index.html.erb:
+10: <% @posts.each do |post| %>
+11:   <tr>
+12:     <td><%=h post.name %></td>
+13:     <td><%=h post.Date %></td>
+14:     <td><%=h post.body %></td>
+15:     <td><%= link_to 'Show', post %></td>
+16:     <td><%= link_to 'Edit', edit_post_path(post) %></td>
+
+    app/views/posts/index.html.erb:13
+    app/views/posts/index.html.erb:10:in `each'
+    app/views/posts/index.html.erb:10
+    app/controllers/posts_controller.rb:7:in `index'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-08 01:43:35) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/posts]
