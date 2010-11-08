@@ -11,14 +11,15 @@
 				<%= link_to image_tag("/images/icons/youtube_icon.gif", :border=>0), candidate.youtube if candidate.youtube? %>	
 				<%= mail_to candidate.email, image_tag("/images/icons/email_icon.gif", :border=>0) if candidate.email? %>	
 				<%= link_to image_tag("/images/icons/rss_icon.gif", :border=>0), candidate.rss if candidate.rss? %>	
-			</p>			
+			</p>
+			<p>			
 			Ward:<br>
 			<%= candidate.getward %>
 			Office:<br>
 			<%= candidate.office %>
 			Phone:<br>
 			<%= candidate.phone %>
-
+			</p>
 
 
 		</div>
