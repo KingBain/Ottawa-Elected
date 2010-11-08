@@ -1,23 +1,23 @@
 	<% @candidates.each do |candidate| %>
 			
-		<div id="canidate" style="width:200px; height:400px; float:left;">
-			<p>
-			<%= image_tag candidate.image, :class=>"align-left frame" if candidate.image %>
+		<div id="canidate" style="width:225px; height:400px; float:left;">
+			<div id="windowbox">
+				<%= image_tag candidate.image, :style=>"float: left;", :class=>"frame" if candidate.image %>
 				<%= link_to image_tag("/images/icons/website_icon.gif", :border=>0), candidate.website if candidate.website? %>
 				<%= link_to image_tag("/images/icons/twitter_icon.gif", :border=>0), candidate.twitter if candidate.twitter? %>	
 				<%= link_to image_tag("/images/icons/facebook_icon.gif", :border=>0), candidate.facebook if candidate.facebook? %>	
 				<%= link_to image_tag("/images/icons/youtube_icon.gif", :border=>0), candidate.youtube if candidate.youtube? %>	
 				<%= mail_to candidate.email, image_tag("/images/icons/email_icon.gif", :border=>0) if candidate.email? %>	
-				<%= link_to image_tag("/images/icons/rss_icon.gif", :border=>0), candidate.rss if candidate.rss? %>	
-			</p>
-			<p>			
-			Ward:<br>
-			<%= candidate.getward %>
-			Office:<br>
-			<%= candidate.office %>
-			Phone:<br>
-			<%= candidate.phone %>
-			</p>
+				<%= link_to image_tag("/images/icons/rss_icon.gif", :border=>0), candidate.rss if candidate.rss? %>
+			</div>
+			<div id="textbox" style="float: left;">			
+				Ward:<br>
+				<%= candidate.getward %>
+				Office:<br>
+				<%= candidate.office %>
+				Phone:<br>
+				<%= candidate.phone %>
+			</div>
 
 
 		</div>
