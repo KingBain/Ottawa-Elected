@@ -7,7 +7,7 @@ def loadmetadata
 end
 
   def index
-	@posts = Post.all
+	@posts = Post.all(:limit =>3, :order =>"Date" )
   end
 
   def show

@@ -1,16 +1,22 @@
 class ViewerController < ApplicationController
 def index
 	@page = Page.find_by_name("home")
+	@posts = Post.all(:order => "date DESC", :limit => 3)
+	@partial = "home"
 end  
 
 def show
-
 	@page = Page.find_by_name(params[:name])
-	@partial = params[:name]
 
-	if params[:name] = "councilors" then	
+	if params[:name] == "home" then	
+	@posts = Post.all(:order => "date DESC", :limit => 3)
+	end
+
+	if params[:name] == "councilors" then	
 	@candidates = Candidate.all(:order => "RANDOM()")
 	end
+
+	@partial = params[:name]
 end
 
 
