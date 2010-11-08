@@ -48327,3 +48327,12 @@ Rendering template within layouts/application
 Rendering viewer/index
 Rendered viewer/_home (2.5ms)
 Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 01:13:13) [GET]
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" ORDER BY Date DESC LIMIT 3[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered viewer/_home (3.2ms)
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/]
