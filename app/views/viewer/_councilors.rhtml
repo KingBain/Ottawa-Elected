@@ -1,8 +1,8 @@
 <div style="text-align: center;">
 	<% @candidates.each do |candidate| %>
 			
-		<div id="canidate" style="width:225px; height:400px; display: inline-block;">
-			<div id="windowbox">
+		<div class="canidate" style="border-style:solid; width:225px; height:400px; display: inline-block;">
+			<div class="windowbox">
 				<%= image_tag candidate.image, :style=>"float: left;", :class=>"frame" if candidate.image %>
 				<%= link_to image_tag("/images/icons/website_icon.gif", :border=>0), candidate.website if candidate.website? %>
 				<%= link_to image_tag("/images/icons/twitter_icon.gif", :border=>0), candidate.twitter if candidate.twitter? %>	
@@ -11,7 +11,7 @@
 				<%= mail_to candidate.email, image_tag("/images/icons/email_icon.gif", :border=>0) if candidate.email? %>	
 				<%= link_to image_tag("/images/icons/rss_icon.gif", :border=>0), candidate.rss if candidate.rss? %>
 			</div>
-			<div id="textbox" style="float: left;">			
+			<div class="textbox" style="text-align:left; float: left;">			
 				<strong>Ward:</strong><br />
 				<%= candidate.getward %><br />
 				<strong>Office:</strong><br />
