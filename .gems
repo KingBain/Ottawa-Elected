@@ -1,2 +1,4 @@
 rails --version 2.3.8
 RedCloth --version 4.2.3
+sqlite3-ruby --version 1.2.5
+

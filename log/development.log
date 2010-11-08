@@ -48304,3 +48304,26 @@ Rendering template within layouts/application
 Rendering viewer/index
 Rendered viewer/_home (2.1ms)
 Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2010-11-08 01:05:50) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY Date LIMIT 3[0m
+Rendering template within layouts/application
+Rendering blog/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2010-11-08 01:05:51) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" ORDER BY Date LIMIT 3[0m
+Rendering template within layouts/application
+Rendering blog/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/blog]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 01:05:52) [GET]
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" ORDER BY Date DESC LIMIT 3[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered viewer/_home (2.5ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/]
