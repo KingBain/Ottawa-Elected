@@ -47074,3 +47074,149 @@ Rendering viewer/show
   [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '11') LIMIT 1[0m
 Rendered viewer/_councilors (56.5ms)
 Completed in 71ms (View: 55, DB: 8) | 200 OK [http://localhost/councilors]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-11-08 00:22:21) [GET]
+  Parameters: {"name"=>"councilors"}
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'councilors') LIMIT 1[0m
+  [4;35;1mCandidate Load (3.2ms)[0m   [0mSELECT * FROM "candidates" ORDER BY RANDOM()[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;36;1mWard Load (7.3ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '22') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '10') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '18') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '3') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '16') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '1') LIMIT 1[0m
+  [4;36;1mWard Load (0.3ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '4') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '11') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '9') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '20') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '17') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '2') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '7') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '12') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '8') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '5') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '19') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '21') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '23') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '13') LIMIT 1[0m
+  [4;36;1mWard Load (0.3ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '15') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '14') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '6') LIMIT 1[0m
+Rendered viewer/_councilors (108.2ms)
+Completed in 140ms (View: 112, DB: 15) | 200 OK [http://localhost/councilors]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-11-08 00:22:23) [GET]
+  Parameters: {"name"=>"councilors"}
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'councilors') LIMIT 1[0m
+  [4;36;1mCandidate Load (3.1ms)[0m   [0;1mSELECT * FROM "candidates" ORDER BY RANDOM()[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '19') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '9') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '2') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '13') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '15') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '22') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '11') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '16') LIMIT 1[0m
+  [4;35;1mWard Load (0.3ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '21') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '10') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '14') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '6') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '7') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '18') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '5') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '20') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '17') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '12') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '23') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '3') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '4') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '1') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '8') LIMIT 1[0m
+Rendered viewer/_councilors (56.9ms)
+Completed in 72ms (View: 56, DB: 8) | 200 OK [http://localhost/councilors]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 00:22:27) [GET]
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-11-08 00:22:28) [GET]
+  Parameters: {"name"=>"councilors"}
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'councilors') LIMIT 1[0m
+  [4;36;1mCandidate Load (3.0ms)[0m   [0;1mSELECT * FROM "candidates" ORDER BY RANDOM()[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '15') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '20') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '19') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '12') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '13') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '22') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '2') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '11') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '18') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '16') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '6') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '7') LIMIT 1[0m
+  [4;35;1mWard Load (0.3ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '10') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '1') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '9') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '17') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '21') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '8') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '4') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '5') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '3') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '14') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '23') LIMIT 1[0m
+Rendered viewer/_councilors (57.0ms)
+Completed in 72ms (View: 56, DB: 8) | 200 OK [http://localhost/councilors]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-08 00:23:01) [GET]
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-11-08 00:23:21) [GET]
+  Parameters: {"name"=>"councilors"}
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'councilors') LIMIT 1[0m
+  [4;36;1mCandidate Load (3.2ms)[0m   [0;1mSELECT * FROM "candidates" ORDER BY RANDOM()[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '7') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '9') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '22') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '3') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '5') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '20') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '11') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '14') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '21') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '13') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '1') LIMIT 1[0m
+  [4;36;1mWard Load (0.3ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '19') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '2') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '16') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '18') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '10') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '6') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '8') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '23') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '4') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '12') LIMIT 1[0m
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."number" = '15') LIMIT 1[0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."number" = '17') LIMIT 1[0m
+Rendered viewer/_councilors (57.0ms)
+Completed in 72ms (View: 56, DB: 8) | 200 OK [http://localhost/councilors]
