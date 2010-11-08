@@ -9,7 +9,7 @@ def show
 	@partial = params[:name]
 
 	if params[:name] = "councilors" then	
-	@candidates = Candidate.all
+	@candidates = Candidate.all(:order => "RANDOM()")
 	end
 end
 

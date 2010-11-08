@@ -1,3 +1,8 @@
+.align-right { float:right; margin: 0 0 15px 15px; }
+.align-left { float:left; margin: 0 15px 15px 0; }
+.frame { padding: 5px; border: 1px solid #aaa; } 
+
+
 *{margin:0; padding:0;}
 
 body {
@@ -81,7 +86,7 @@ padding: 0 0 0 20px;
 }
 
 #content {
-width: 780px;
+width: 760px;
 padding: 20px 0;
 }
 
