@@ -1,6 +1,7 @@
+<div style="text-align: center;">
 	<% @candidates.each do |candidate| %>
 			
-		<div id="canidate" style="width:225px; height:400px; float:left;">
+		<div id="canidate" style="width:225px; height:400px; display: inline-block;">
 			<div id="windowbox">
 				<%= image_tag candidate.image, :style=>"float: left;", :class=>"frame" if candidate.image %>
 				<%= link_to image_tag("/images/icons/website_icon.gif", :border=>0), candidate.website if candidate.website? %>
@@ -11,11 +12,11 @@
 				<%= link_to image_tag("/images/icons/rss_icon.gif", :border=>0), candidate.rss if candidate.rss? %>
 			</div>
 			<div id="textbox" style="float: left;">			
-				Ward:<br>
-				<%= candidate.getward %>
-				Office:<br>
-				<%= candidate.office %>
-				Phone:<br>
+				<strong>Ward:</strong><br />
+				<%= candidate.getward %><br />
+				<strong>Office:</strong><br />
+				<%= candidate.office %><br />
+				<strong>Phone:</strong><br />
 				<%= candidate.phone %>
 			</div>
 
@@ -23,3 +24,4 @@
 		</div>
 
 	<% end %>
+</div>
