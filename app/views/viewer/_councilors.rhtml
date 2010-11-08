@@ -1,7 +1,7 @@
 <div style="text-align: center;">
 	<% @candidates.each do |candidate| %>
 			
-		<div class="canidate" style="border-style:solid; width:225px; height:400px; display: inline-block;">
+		<div class="canidate" style="vertical-align:text-top; width:225px; height:400px; display: inline-block;">
 			<div class="windowbox">
 				<%= image_tag candidate.image, :style=>"float: left;", :class=>"frame" if candidate.image %>
 				<%= link_to image_tag("/images/icons/website_icon.gif", :border=>0), candidate.website if candidate.website? %>
