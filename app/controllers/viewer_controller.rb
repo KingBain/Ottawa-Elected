@@ -1,7 +1,7 @@
 class ViewerController < ApplicationController
 def index
 	@page = Page.find_by_name("home")
-	@posts = Post.all(:order => "date", :limit => 3)
+	@posts = Post.all(:order => "date DESC", :limit => 3)
 	@partial = "home"
 end  
 
@@ -9,7 +9,7 @@ def show
 	@page = Page.find_by_name(params[:name])
 
 	if params[:name] == "home" then	
-	@posts = Post.all(:order => "date", :limit => 3)
+	@posts = Post.all(:order => "date DESC", :limit => 3)
 	end
 
 	if params[:name] == "councilors" then	
