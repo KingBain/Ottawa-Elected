@@ -1,3 +1,5 @@
 rails --version 2.3.8
 sqlite3-ruby --version 1.2.5
 RedCloth --version 4.2.3
+feed-normalizer --version 1.5.2
+nokogiri --version 1.4.3.1
