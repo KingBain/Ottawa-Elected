@@ -6,9 +6,8 @@ class CreateNewsarticles < ActiveRecord::Migration
       t.datetime :pubdate
       t.text :gnews_url
       t.string :url
-      t.string :moderation
       t.text :rejection
-
+      t.string :moderation, :default => 'new'
       t.timestamps
     end
   end

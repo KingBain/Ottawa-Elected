@@ -2,7 +2,7 @@ class CreateMentions < ActiveRecord::Migration
   def self.up
     create_table :mentions do |t|
       t.integer :candidate_id
-      t.integer :news_article_id
+      t.integer :newsarticle_id
       t.text :summary
 
       t.timestamps

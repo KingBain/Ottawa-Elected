@@ -10,14 +10,14 @@ task :find_candidates => :environment do
       mention_count = 0
       for article in articles do
         begin
-          current_article = NewsArticle.find_or_create_by_url(article)
-        rescue Exception
-          puts "Unable to find or create: "
-          pp article
+          current_article = Newsarticle.find_or_create_by_url(article)
+        rescue Exception => esc
+         puts "Unable to find or create: "
+         # pp esc
         else
           if !current_article.candidates.include?(candidate)
             mention_count += 1
-            mention = Mention.new(:candidate => candidate, :news_article => current_article, :summary => article[:summary])
+            mention = Mention.new(:candidate => candidate, :newsarticle => current_article, :summary => article[:summary])
             puts " Error saving mention for #{current_article.title}." if !mention.save
           end
           if current_article.moderation == 'new'
