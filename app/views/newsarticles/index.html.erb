@@ -1,0 +1,32 @@
+<h1>Listing newsarticles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Source</th>
+    <th>Pubdate</th>
+    <th>Gnews url</th>
+    <th>Url</th>
+    <th>Moderation</th>
+    <th>Rejection</th>
+  </tr>
+
+<% @newsarticles.each do |newsarticle| %>
+  <tr>
+    <td><%=h newsarticle.title %></td>
+    <td><%=h newsarticle.source %></td>
+    <td><%=h newsarticle.pubdate %></td>
+    <td><%=h newsarticle.gnews_url %></td>
+    <td><%=h newsarticle.url %></td>
+    <td><%=h newsarticle.moderation %></td>
+    <td><%=h newsarticle.rejection %></td>
+    <td><%= link_to 'Show', newsarticle %></td>
+    <td><%= link_to 'Edit', edit_newsarticle_path(newsarticle) %></td>
+    <td><%= link_to 'Destroy', newsarticle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New newsarticle', new_newsarticle_path %>

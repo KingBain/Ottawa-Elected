@@ -1,0 +1,24 @@
+<h1>Listing mentions</h1>
+
+<table>
+  <tr>
+    <th>Candidate</th>
+    <th>News article</th>
+    <th>Summary</th>
+  </tr>
+
+<% @mentions.each do |mention| %>
+  <tr>
+    <td><%=h mention.candidate_id %></td>
+    <td><%=h mention.news_article_id %></td>
+    <td><%=h mention.summary %></td>
+    <td><%= link_to 'Show', mention %></td>
+    <td><%= link_to 'Edit', edit_mention_path(mention) %></td>
+    <td><%= link_to 'Destroy', mention, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mention', new_mention_path %>

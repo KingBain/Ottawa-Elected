@@ -48574,3 +48574,132 @@ Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/posts]
   [4;35;1mSQL (77.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101030023150')[0m
   [4;36;1mSQL (77.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101030031920')[0m
   [4;35;1mSQL (109.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101030013334')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (123.8ms)[0m   [0;1mCREATE TABLE "candidates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "ward" varchar(255), "website" varchar(255), "twitter" varchar(255), "youtube" varchar(255), "email" varchar(255), "facebook" varchar(255), "rss" varchar(255), "office" text, "phone" varchar(255), "created_at" datetime, "updated_at" datetime, "image" varchar(255)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (84.2ms)[0m   [0;1mCREATE TABLE "pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "head" text) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (92.8ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (80.0ms)[0m   [0;1mCREATE TABLE "wards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "number" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (100.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (75.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (85.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101108064008')[0m
+  [4;36;1mSQL (77.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101105024533')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101031153124')[0m
+  [4;36;1mSQL (77.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101030031832')[0m
+  [4;35;1mSQL (66.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101030023150')[0m
+  [4;36;1mSQL (66.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101030031920')[0m
+  [4;35;1mSQL (87.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101030013334')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20101030013334)
+Migrating to AddHeadToPage (20101030023150)
+Migrating to CreateCandidates (20101030031832)
+Migrating to CreateWards (20101030031920)
+Migrating to CreatePosts (20101031153124)
+Migrating to AddImageToCandidates (20101105024533)
+Migrating to FixColumnName (20101108064008)
+Migrating to CreateNewsarticles (20101112021104)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "newsarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "source" varchar(255), "pubdate" datetime, "gnews_url" text, "url" varchar(255), "moderation" varchar(255), "rejection" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101112021104')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("candidates")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsarticles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("wards")[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-11-11 21:11:50) [GET]
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" ORDER BY date DESC LIMIT 3[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered viewer/_home (4.0ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NewsarticlesController#index (for 127.0.0.1 at 2010-11-11 21:11:59) [GET]
+  [4;36;1mNewsarticle Load (0.6ms)[0m   [0;1mSELECT * FROM "newsarticles" [0m
+Rendering template within layouts/newsarticles
+Rendering newsarticles/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/newsarticles]
+
+
+Processing NewsarticlesController#new (for 127.0.0.1 at 2010-11-11 21:12:01) [GET]
+Rendering template within layouts/newsarticles
+Rendering newsarticles/new
+Completed in 27ms (View: 22, DB: 0) | 200 OK [http://localhost/newsarticles/new]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20101030013334)
+Migrating to AddHeadToPage (20101030023150)
+Migrating to CreateCandidates (20101030031832)
+Migrating to CreateWards (20101030031920)
+Migrating to CreatePosts (20101031153124)
+Migrating to AddImageToCandidates (20101105024533)
+Migrating to FixColumnName (20101108064008)
+Migrating to CreateNewsarticles (20101112021104)
+Migrating to CreateMentions (20101112021418)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "mentions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "candidate_id" integer, "news_article_id" integer, "summary" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101112021418')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("candidates")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("mentions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("newsarticles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("wards")[0m

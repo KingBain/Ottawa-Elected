@@ -1,0 +1,38 @@
+<p>
+  <b>Title:</b>
+  <%=h @newsarticle.title %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @newsarticle.source %>
+</p>
+
+<p>
+  <b>Pubdate:</b>
+  <%=h @newsarticle.pubdate %>
+</p>
+
+<p>
+  <b>Gnews url:</b>
+  <%=h @newsarticle.gnews_url %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @newsarticle.url %>
+</p>
+
+<p>
+  <b>Moderation:</b>
+  <%=h @newsarticle.moderation %>
+</p>
+
+<p>
+  <b>Rejection:</b>
+  <%=h @newsarticle.rejection %>
+</p>
+
+
+<%= link_to 'Edit', edit_newsarticle_path(@newsarticle) %> |
+<%= link_to 'Back', newsarticles_path %>

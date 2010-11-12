@@ -469,3 +469,239 @@ Processing WardsController#update (for 0.0.0.0 at 2010-11-11 21:03:50) [PUT]
   [4;35;1mWard Load (0.3ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
 Redirected to http://test.host/wards/980190962
 Completed in 2ms (DB: 0) | 302 Found [http://test.host/wards/980190962?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "candidates" [0m
+
+
+Processing CandidatesController#create (for 0.0.0.0 at 2010-11-11 21:07:46) [POST]
+  Parameters: {"candidate"=>{}}
+  [4;35;1mCandidate Create (0.3ms)[0m   [0mINSERT INTO "candidates" ("name", "created_at", "youtube", "updated_at", "website", "rss", "phone", "facebook", "office", "image", "ward", "twitter", "email") VALUES(NULL, '2010-11-12 02:07:46', NULL, '2010-11-12 02:07:46', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Redirected to http://test.host/candidates/980190963
+Completed in 10ms (DB: 2) | 302 Found [http://test.host/candidates?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "candidates" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "candidates" [0m
+  [4;36;1mCandidate Load (0.3ms)[0m   [0;1mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+
+
+Processing CandidatesController#destroy (for 0.0.0.0 at 2010-11-11 21:07:46) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mCandidate Load (0.3ms)[0m   [0mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+  [4;36;1mCandidate Destroy (0.1ms)[0m   [0;1mDELETE FROM "candidates" WHERE "id" = 980190962[0m
+Redirected to http://test.host/candidates
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/candidates/980190962]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "candidates" [0m
+  [4;36;1mCandidate Load (0.3ms)[0m   [0;1mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+
+
+Processing CandidatesController#edit (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mCandidate Load (0.3ms)[0m   [0mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+Rendering template within layouts/candidates
+Rendering candidates/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/candidates/980190962/edit]
+
+
+Processing CandidatesController#index (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  [4;36;1mCandidate Load (0.4ms)[0m   [0;1mSELECT * FROM "candidates" [0m
+Rendering template within layouts/candidates
+Rendering candidates/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/candidates]
+
+
+Processing CandidatesController#new (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+Rendering template within layouts/candidates
+Rendering candidates/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/candidates/new]
+  [4;35;1mCandidate Load (0.3ms)[0m   [0mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+
+
+Processing CandidatesController#show (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mCandidate Load (0.3ms)[0m   [0;1mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+Rendering template within layouts/candidates
+Rendering candidates/show
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/candidates/980190962]
+  [4;35;1mCandidate Load (0.3ms)[0m   [0mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+
+
+Processing CandidatesController#update (for 0.0.0.0 at 2010-11-11 21:07:46) [PUT]
+  Parameters: {"candidate"=>{}, "id"=>"980190962"}
+  [4;36;1mCandidate Load (0.3ms)[0m   [0;1mSELECT * FROM "candidates" WHERE ("candidates"."id" = 980190962) [0m
+Redirected to http://test.host/candidates/980190962
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/candidates/980190962?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" [0m
+
+
+Processing PagesController#create (for 0.0.0.0 at 2010-11-11 21:07:46) [POST]
+  Parameters: {"page"=>{}}
+  [4;36;1mPage Create (0.2ms)[0m   [0;1mINSERT INTO "pages" ("name", "head", "created_at", "title", "body", "updated_at") VALUES(NULL, NULL, '2010-11-12 02:07:46', NULL, NULL, '2010-11-12 02:07:46')[0m
+Redirected to http://test.host/pages/980190963
+Completed in 4ms (DB: 0) | 302 Found [http://test.host/pages?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+
+
+Processing PagesController#destroy (for 0.0.0.0 at 2010-11-11 21:07:46) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+  [4;35;1mPage Destroy (0.1ms)[0m   [0mDELETE FROM "pages" WHERE "id" = 980190962[0m
+Redirected to http://test.host/pages
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/pages/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+
+
+Processing PagesController#edit (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/pages/980190962/edit]
+
+
+Processing PagesController#index (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM "pages" [0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/pages]
+
+
+Processing PagesController#new (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+Rendering template within layouts/application
+Rendering pages/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/pages/new]
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+
+
+Processing PagesController#show (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering pages/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/pages/980190962]
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+
+
+Processing PagesController#update (for 0.0.0.0 at 2010-11-11 21:07:46) [PUT]
+  Parameters: {"id"=>"980190962", "page"=>{}}
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."id" = 980190962) [0m
+Redirected to http://test.host/pages/980190962
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/pages/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2010-11-11 21:07:46) [POST]
+  Parameters: {"post"=>{}}
+  [4;35;1mPost Create (0.2ms)[0m   [0mINSERT INTO "posts" ("name", "created_at", "body", "updated_at", "date") VALUES(NULL, '2010-11-12 02:07:46', NULL, '2010-11-12 02:07:46', NULL)[0m
+Redirected to http://test.host/posts/980190963
+Completed in 4ms (DB: 0) | 302 Found [http://test.host/posts?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2010-11-11 21:07:46) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+  [4;36;1mPost Destroy (0.1ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 980190962[0m
+Redirected to http://test.host/posts
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/980190962]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/posts/980190962/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/posts/980190962]
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2010-11-11 21:07:46) [PUT]
+  Parameters: {"post"=>{}, "id"=>"980190962"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 980190962) [0m
+Redirected to http://test.host/posts/980190962
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/posts/980190962?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "wards" [0m
+
+
+Processing WardsController#create (for 0.0.0.0 at 2010-11-11 21:07:46) [POST]
+  Parameters: {"ward"=>{}}
+  [4;36;1mWard Create (0.2ms)[0m   [0;1mINSERT INTO "wards" ("name", "number", "created_at", "updated_at") VALUES(NULL, NULL, '2010-11-12 02:07:46', '2010-11-12 02:07:46')[0m
+Redirected to http://test.host/wards/980190963
+Completed in 4ms (DB: 0) | 302 Found [http://test.host/wards?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "wards" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "wards" [0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+
+
+Processing WardsController#destroy (for 0.0.0.0 at 2010-11-11 21:07:46) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+  [4;35;1mWard Destroy (0.1ms)[0m   [0mDELETE FROM "wards" WHERE "id" = 980190962[0m
+Redirected to http://test.host/wards
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/wards/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "wards" [0m
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+
+
+Processing WardsController#edit (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+Rendering template within layouts/wards
+Rendering wards/edit
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/wards/980190962/edit]
+
+
+Processing WardsController#index (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  [4;35;1mWard Load (0.3ms)[0m   [0mSELECT * FROM "wards" [0m
+Rendering template within layouts/wards
+Rendering wards/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/wards]
+
+
+Processing WardsController#new (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+Rendering template within layouts/wards
+Rendering wards/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/wards/new]
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+
+
+Processing WardsController#show (for 0.0.0.0 at 2010-11-11 21:07:46) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+Rendering template within layouts/wards
+Rendering wards/show
+Completed in 55ms (View: 11, DB: 0) | 200 OK [http://test.host/wards/980190962]
+  [4;36;1mWard Load (0.2ms)[0m   [0;1mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+
+
+Processing WardsController#update (for 0.0.0.0 at 2010-11-11 21:07:46) [PUT]
+  Parameters: {"id"=>"980190962", "ward"=>{}}
+  [4;35;1mWard Load (0.2ms)[0m   [0mSELECT * FROM "wards" WHERE ("wards"."id" = 980190962) [0m
+Redirected to http://test.host/wards/980190962
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/wards/980190962?]

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108064008) do
+ActiveRecord::Schema.define(:version => 20101112021418) do
 
   create_table "candidates", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,26 @@ ActiveRecord::Schema.define(:version => 20101108064008) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+  end
+
+  create_table "mentions", :force => true do |t|
+    t.integer  "candidate_id"
+    t.integer  "news_article_id"
+    t.text     "summary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "newsarticles", :force => true do |t|
+    t.string   "title"
+    t.string   "source"
+    t.datetime "pubdate"
+    t.text     "gnews_url"
+    t.string   "url"
+    t.string   "moderation"
+    t.text     "rejection"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pages", :force => true do |t|
