@@ -10,7 +10,7 @@
 <% @mentions.each do |mention| %>
   <tr>
     <td><%=h mention.candidate_id %></td>
-    <td><%=h mention.news_article_id %></td>
+    <td><%=h mention.newsarticle_id %></td>
     <td><%=h mention.summary %></td>
     <td><%= link_to 'Show', mention %></td>
     <td><%= link_to 'Edit', edit_mention_path(mention) %></td>

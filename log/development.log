@@ -52258,3 +52258,51 @@ WARNING: Can't mass-assign these protected attributes: summary
   [4;35;1mCandidate Load (0.4ms)[0m   [0mSELECT "candidates".id FROM "candidates" INNER JOIN "mentions" ON "candidates".id = "mentions".candidate_id WHERE ("candidates"."id" = 23) AND (("mentions".newsarticle_id = 151)) LIMIT 1[0m
   [4;36;1mMention Create (0.3ms)[0m   [0;1mINSERT INTO "mentions" ("created_at", "updated_at", "candidate_id", "newsarticle_id", "summary") VALUES('2010-11-12 02:56:55', '2010-11-12 02:56:55', 23, 151, 'Candidate <b>Allan Hubley</b> has been active in his area community association and pitched in to help during Kanata flooding in 2002 and 2009. <b>...</b>')[0m
   [4;35;1mNewsarticle Update (0.5ms)[0m   [0mUPDATE "newsarticles" SET "updated_at" = '2010-11-12 02:56:55', "moderation" = 'approved' WHERE "id" = 151[0m
+
+
+Processing NewsarticlesController#index (for 127.0.0.1 at 2010-11-11 22:15:41) [GET]
+  [4;36;1mNewsarticle Load (16.2ms)[0m   [0;1mSELECT * FROM "newsarticles" ORDER BY pubdate DESC[0m
+Rendering template within layouts/newsarticles
+Rendering newsarticles/index
+Completed in 427ms (View: 393, DB: 16) | 200 OK [http://localhost/newsarticles]
+
+
+Processing MentionsController#index (for 127.0.0.1 at 2010-11-11 22:15:48) [GET]
+  [4;35;1mMention Load (17.5ms)[0m   [0mSELECT * FROM "mentions" [0m
+Rendering template within layouts/mentions
+Rendering mentions/index
+
+ActionView::TemplateError (undefined method `news_article_id' for #<Mention:0xb68672a0>) on line #13 of app/views/mentions/index.html.erb:
+10: <% @mentions.each do |mention| %>
+11:   <tr>
+12:     <td><%=h mention.candidate_id %></td>
+13:     <td><%=h mention.news_article_id %></td>
+14:     <td><%=h mention.summary %></td>
+15:     <td><%= link_to 'Show', mention %></td>
+16:     <td><%= link_to 'Edit', edit_mention_path(mention) %></td>
+
+    app/views/mentions/index.html.erb:13
+    app/views/mentions/index.html.erb:10:in `each'
+    app/views/mentions/index.html.erb:10
+    app/controllers/mentions_controller.rb:7:in `index'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/bain/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MentionsController#index (for 127.0.0.1 at 2010-11-11 22:16:57) [GET]
+  [4;36;1mMention Load (18.0ms)[0m   [0;1mSELECT * FROM "mentions" [0m
+Rendering template within layouts/mentions
+Rendering mentions/index
+Completed in 719ms (View: 687, DB: 18) | 200 OK [http://localhost/mentions]
